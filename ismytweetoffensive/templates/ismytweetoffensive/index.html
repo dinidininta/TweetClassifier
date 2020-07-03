@@ -39,13 +39,14 @@
       <p>"Is it kind?"</p>
 
       <!-- <input class="textfield" type="text" placeholder="Type your tweet here" id="tweet" name="tweet"> -->
-      <form action="/" method="get">
+      <form action="/" method="post">
         {% csrf_token %}
         {{ form }}
         <br>
         <input class="button" type="submit" value="Check">
-    </form>
-    
+        <br>
+        <h3>{{ result.tweet }}</h5>
+      </form>
     </div>
   </body>
 </html>
