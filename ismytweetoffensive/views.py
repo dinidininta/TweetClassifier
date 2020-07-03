@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from .forms import TweetForm
+
 def index(request):
-    return render(request, 'ismytweetoffensive/index.html')
+    if request.method == 'GET':
+        form = TweetForm()
+    
+    return render(request, 'ismytweetoffensive/index.html', {'form': form})
