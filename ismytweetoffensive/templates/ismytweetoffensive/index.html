@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+      .container{
+        text-align: center;
+      }
+      .textfield{
+        width: 50%;
+        padding: 12px 20px;
+        margin-top: 50px;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+      .button{
+        background-color: #008CBA;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+      .button:hover {
+        background-color: white;
+        color: #008CBA;
+        border: 2px solid#008CBA;
+      }
+      p{
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Is My Tweet Offensive?</h1>
+      <p>Before you speak, let your words pass through three gates:</p>
+      <p>"Is it true?"</p>
+      <p>"Is it necessary?"</p>
+      <p>"Is it kind?"</p>
+
+      <!-- <input class="textfield" type="text" placeholder="Type your tweet here" id="tweet" name="tweet"> -->
+      <form action="/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <input class="button" type="submit" value="Check">
+        <br>
+        <h3>{{ result }}</h5>
+      </form>
+    </div>
+  </body>
+</html>
