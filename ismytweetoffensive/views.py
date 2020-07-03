@@ -6,11 +6,11 @@ from .classification import Classification
 
 def index(request):
     index = 'ismytweetoffensive/index.html'
+    classification = Classification()
 
     if request.method == 'POST':
         form = TweetForm(request.POST)
         if form.is_valid():
-            classification = Classification()
             tweet = form.cleaned_data['tweet']
             result = classification.test(tweet)
 
