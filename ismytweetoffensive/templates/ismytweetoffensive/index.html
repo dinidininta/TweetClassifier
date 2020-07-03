@@ -1,18 +1,27 @@
 <html>
   <head>
     <style>
-      .title{
+      .container{
         text-align: center;
+      }
+      .textfield{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 50px 0;
+        box-sizing: border-box;
+        border-radius: 4px;
       }
     </style>
   </head>
   <body>
-    <div class="title">
+    <div class="container">
       <h1>Is My Tweet Offensive?</h1>
       <p>Before you speak, let your words pass through three gates:</p>
       <p>"Is it true?"</p>
       <p>"Is it necessary?"</p>
       <p>"Is it kind?"</p>
+
+      <input class="textfield" type="text" placeholder="Type your tweet here" id="tweet" name="tweet">
     </div>
   </body>
 </html>
