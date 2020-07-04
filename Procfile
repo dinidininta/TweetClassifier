@@ -1,1 +1,0 @@
-web: gunicorn TweetClassifier.wsgi --log-file -
