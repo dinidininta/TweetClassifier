@@ -3,6 +3,7 @@
     <style>
       .container{
         text-align: center;
+        font-family: sans-serif;
       }
       .textfield{
         width: 50%;
@@ -31,6 +32,23 @@
       p{
         font-style: italic;
       }
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      .negative{
+        color: #d50000;
+      }
+      .neutral{
+        color: black;
+      }
+      .positive{
+        color: #4caf50;
+      }
     </style>
   </head>
   <body>
@@ -48,8 +66,18 @@
         <br>
         <input class="button" type="submit" value="Check">
         <br>
-        <h3>{{ result }}</h5>
+        <h2 class="{{result.label}}">{{ result.message }}</h2>
       </form>
     </div>
+    <footer>
+      <p>Powered by 
+        <a href="https://github.com/django/django">Django</a>
+         | 
+        <a href="https://github.com/facebookresearch/fastText">FastText</a>
+      </p>
+      <p>This app uses pre-trained model from 
+        <a href="https://github.com/charlesmalafosse/FastText-sentiment-analysis-for-tweets">
+          charlesmalafosse/FastText-sentiment-analysis-for-tweets</a></p>
+    </footer>
   </body>
 </html>

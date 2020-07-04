@@ -10,9 +10,9 @@ class Classification:
 
   def map_result(self, result):
     label_dict = {
-      "__label__NEGATIVE": "Your tweet is offensive! Don't post it!",
-      "__label__NEUTRAL": "Your tweet is ok, I guess..",
-      "__label__POSITIVE": "This is a good tweet. Go ahead :)"
+      "__label__NEGATIVE": { "label": "negative", "message": "Your tweet is offensive! Don't post it!"},
+      "__label__NEUTRAL": { "label": "neutral", "message": "Your tweet is ok, I guess.." },
+      "__label__POSITIVE": { "label": "positive", "message": "This is a good tweet. Go ahead :)" }
     }
 
     return label_dict[result]
