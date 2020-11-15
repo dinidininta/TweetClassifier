@@ -18,6 +18,7 @@ class Classification:
     return label_dict[result]
 
   def test(self, tweet):
+    tweet = tweet.lower()
     [labels, scores] = self.model.predict([tweet],k=3)
     result = [label[0] for label in labels][0]
     return self.map_result(result)
